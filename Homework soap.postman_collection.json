@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "15c51d61-6973-4c5e-af29-80da88bbec28",
+		"name": "Homework soap",
+		"description": "This is a collection of different SOAP APIs that are completley public and do not require any authentication, making it easier for consumers to play with and understand what APIs are all about by seeing the many different ways in which APIs can be used.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3776221",
+		"_collection_link": "https://grey-astronaut-778068.postman.co/workspace/6291237b-c358-4caa-9a8f-11e8c258e387/collection/3776221-15c51d61-6973-4c5e-af29-80da88bbec28?action=share&source=collection_link&creator=3776221"
+	},
+	"item": [
+		{
+			"name": "Book ISBN Numbers",
+			"item": [
+				{
+					"name": "Is Valid ISBN13 Number",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <IsValidISBN13 xmlns=\"http://webservices.daehosting.com/ISBN\">\n      <sISBN>978-1-4612-9090-2</sISBN>\n    </IsValidISBN13>\n  </soap:Body>\n</soap:Envelope>"
+						},
+						"url": {
+							"raw": "http://webservices.daehosting.com/services/isbnservice.wso",
+							"protocol": "http",
+							"host": [
+								"webservices",
+								"daehosting",
+								"com"
+							],
+							"path": [
+								"services",
+								"isbnservice.wso"
+							]
+						},
+						"description": "The test is done by calculation on the first 12 digits and compare the result with the checksum number at the end. You have to pass a 13 digits number."
+					},
+					"response": []
+				},
+				{
+					"name": "Is Valid ISBN10 Number",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <IsValidISBN10 xmlns=\"http://webservices.daehosting.com/ISBN\">\n      <sISBN>0-19-852663-6</sISBN>\n    </IsValidISBN10>\n  </soap:Body>\n</soap:Envelope>"
+						},
+						"url": {
+							"raw": "http://webservices.daehosting.com/services/isbnservice.wso",
+							"protocol": "http",
+							"host": [
+								"webservices",
+								"daehosting",
+								"com"
+							],
+							"path": [
+								"services",
+								"isbnservice.wso"
+							]
+						},
+						"description": "The test is done by calculation on the first 9 digits and compare the result with the checksum number at the end. You have to pass a 10 digits number or 8 digits and an X."
+					},
+					"response": []
+				}
+			],
+			"description": "SOAP APIs for book ISBN numbers.",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
