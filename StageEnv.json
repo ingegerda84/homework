@@ -1,15 +1,15 @@
 {
-	"id": "7cddb7c4-60be-40c6-9f00-2bfd1acf5b2d",
-	"name": "Prod Env",
+	"id": "d531b4ff-551e-473b-ac04-20d8c9b005db",
+	"name": "Stage Env",
 	"values": [
 		{
 			"key": "URL",
-			"value": "qauto.forstudy.space/api",
+			"value": "https://qauto2.forstudy.space/api",
 			"type": "default",
 			"enabled": true
 		}
 	],
 	"_postman_variable_scope": "environment",
-	"_postman_exported_at": "2024-11-12T17:05:19.663Z",
+	"_postman_exported_at": "2024-11-12T17:36:02.811Z",
 	"_postman_exported_using": "Postman/11.18.0"
 }
